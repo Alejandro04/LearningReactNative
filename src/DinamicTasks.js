@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import AddTask from './addTasks';
 
-const App = () => {
-  const [count, setCount] = useState(0);
+
+const DinamicTask = () => {
   const [items, setItems] = useState()
   let data = [
     { id: 1, title: 'Tasks 1' },
@@ -40,6 +41,7 @@ const App = () => {
 
   return (
     <View style={styles.container}>
+       <AddTask/>
       <FlatList
         data={items}
         renderItem={renderItem}
@@ -77,4 +79,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default DinamicTask;

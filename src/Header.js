@@ -10,7 +10,7 @@ const Header = ({title}) => {
 }
 
 Header.defaultProps = {
-    title: 'HEADER'
+    title: 'TASKS'
 }
 
 const styles = StyleSheet.create({

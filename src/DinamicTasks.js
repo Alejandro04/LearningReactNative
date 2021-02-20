@@ -19,6 +19,12 @@ const DinamicTask = () => {
     })
   }
 
+  const AddItem = (item) => {
+    setItems(prevItems => {
+      return [{id: prevItems.length+1, title: item}, ...prevItems]
+    })
+  }
+
   const Item = ({ title, id }) => (
     <TouchableOpacity
       style={styles.button}
@@ -41,7 +47,7 @@ const DinamicTask = () => {
 
   return (
     <View style={styles.container}>
-       <AddTask/>
+      <AddTask AddItem={AddItem} />
       <FlatList
         data={items}
         renderItem={renderItem}

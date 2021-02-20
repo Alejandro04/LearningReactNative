@@ -27,13 +27,19 @@ import {
 import Hello from './src/Hello';
 import HeaderComponent from './src/Header';
 import Tasks from './src/Tasks';
+import DinamicTasks from './src/DinamicTasks'
 
 const App: () => React$Node = () => {
   return (
     <>
       <HeaderComponent />
-      <Tasks />
-      <Hello styleContainer={styles.sectionContainer} styleTitle={styles.sectionTitle} />
+      <DinamicTasks/>
+      {
+        /*
+         <Tasks />
+          <Hello styleContainer={styles.sectionContainer} styleTitle={styles.sectionTitle} /> 
+        **/
+      }
     </>
   );
 };
